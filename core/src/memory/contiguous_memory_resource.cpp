@@ -70,7 +70,9 @@ void *contiguous_memory_resource::do_allocate(std::size_t size,
         throw std::bad_alloc();
     }
 }
-
+void contiguous_memory_resource::reuse(){
+    m_next=m_begin;
+}
 void contiguous_memory_resource::do_deallocate(void *, std::size_t,
                                                std::size_t) {
     /*

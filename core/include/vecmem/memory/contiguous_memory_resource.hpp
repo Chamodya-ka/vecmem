@@ -50,6 +50,7 @@ public:
      * This method deallocates the arena memory on the upstream allocator.
      */
     ~contiguous_memory_resource();
+    void reuse();
 
 private:
     /// @name Function(s) implemented from @c vecmem::memory_resource
